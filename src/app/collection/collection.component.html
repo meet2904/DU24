@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collection - MEET'S FASHION</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- THIS IS FOR FONTS -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+  <!-- THIS IS FOR FOUNT AWOSOME -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+  <style>
+    body{
+      padding-top: 50px;
+      background: linear-gradient(to bottom, #d19ea3, #c194ac, #b38ab2, #a17fb5);
+      font-family: 'Poppins', sans-serif;
+    }
+    .card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+            background-color: black;
+            color: white;
+            width: auto;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .brand-name {
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        .footer-btn {
+            color: #fff;
+            background-color: transparent;
+            padding: 0.3rem 0.6rem;
+        }
+
+        .footer-btn:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .footer-buttons {
+            display: grid;
+            gap: 10px;
+        }
+
+        .btn-group {
+            display: flex;
+        }
+
+    .btn-custom {
+      font-size: 1.8rem;
+      padding: 1.2rem 3rem;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      background-color: #000;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* THIS IS FOR NEVBAAR */
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .navbar-brand {
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-left: 1rem;
+    }
+
+    .nav-link {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      margin-right: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">MEET'S FASHION</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/boutique">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLink="/boutique/collection" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Collections
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="/boutique/collection">Bridal</a>
+            <a class="dropdown-item" href="#">Casual</a>
+            <!-- Add more collections as needed -->
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contect-us">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Title -->
+  <div class="container mt-4">
+    <h1 class="text-center">Collection Name</h1>
+    <p class="text-center text-muted">Explore our exclusive collection.</p>
+  </div>
+
+  <!-- Collection Details -->
+  <div class="container mt-4">
+    <div class="row">
+      <!-- Example card for garment details -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Garment Image">
+          <div class="card-body">
+            <h5 class="card-title">Garment Title</h5>
+            <p class="card-text"><strong>Total Material Used:</strong> 5 meters of silk, 2 meters of lace</p>
+            <p class="card-text"><strong>Cost of Making:</strong> $200</p>
+            <p class="card-text"><strong>Description:</strong> This elegant garment features intricate lace detailing
+              and is crafted from the finest silk.</p>
+            <p class="card-text"><strong>Other Details:</strong> Available in various sizes and colors.</p>
+            <a href="#" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat the above block for more garments -->
+      <!-- <script>
+        for (let i = 2; i <= 12; i++) {
+          document.write(`
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Garment Image ${i}">
+                <div class="card-body">
+                  <h5 class="card-title">Garment Title ${i}</h5>
+                  <p class="card-text"><strong>Total Material Used:</strong> X meters of material</p>
+                  <p class="card-text"><strong>Cost of Making:</strong> $X</p>
+                  <p class="card-text"><strong>Description:</strong> Description for garment ${i}.</p>
+                  <p class="card-text"><strong>Other Details:</strong> Details for garment ${i}.</p>
+                  <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+              </div>
+            </div>
+          `);
+        }
+      </script> -->
+
+
+      <!-- garment.component.html -->
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4" *ngFor="let garment of garments">
+          <div class="card">
+            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Garment Image {{ garment }}">
+            <div class="card-body">
+              <h5 class="card-title">Garment Title {{ garment }}</h5>
+              <p class="card-text"><strong>Total Material Used:</strong> X meters of material</p>
+              <p class="card-text"><strong>Cost of Making:</strong> $X</p>
+              <p class="card-text"><strong>Description:</strong> Description for garment {{ garment }}.</p>
+              <p class="card-text"><strong>Other Details:</strong> Details for garment {{ garment }}.</p>
+              <a href="#" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h1 class="brand-name">&copy; MEET'S FASHION</h1>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <p>Some information text goes here.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="footer-buttons">
+                    <div class="btn-group">
+                        <a href="https://www.instagram.com/your-brand" target="_blank"
+                            class="btn footer-btn">&nbsp;<i class="fab fa-instagram"></i> &nbsp;Instagram</a>
+                        <a href="https://www.facebook.com/your-brand" target="_blank"
+                            class="btn footer-btn">&nbsp;<i class="fab fa-facebook"></i>&nbsp;Facebook</a>
+                    </div>
+                    <div class="btn-group">
+                        <a href="https://wa.me/your-number" target="_blank" class="btn footer-btn">&nbsp;<i
+                                class="fab fa-whatsapp"></i>&nbsp;WhatsApp</a>
+                        <a href="tel:your-number" class="btn footer-btn">&nbsp;<i
+                                class="fas fa-phone"></i>&nbsp;Call Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

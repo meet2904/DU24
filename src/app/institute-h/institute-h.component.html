@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEET'S FASHION Institute</title>
+
+    <!-- THIS IS FOR FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- THIS IS FOR FOUNT AWOSOME -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 56px;
+            background: linear-gradient(to bottom, #d19ea3, #c194ac, #b38ab2, #a17fb5);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            width: auto;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .brand-name {
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        .footer-btn {
+            color: #fff;
+            background-color: transparent;
+            padding: 0.3rem 0.6rem;
+        }
+
+        .footer-btn:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .footer-buttons {
+            display: grid;
+            gap: 10px;
+        }
+
+        .btn-group {
+            display: flex;
+        }
+
+        /* THIS IS FOR NEVBAAR */
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-left: 1rem;
+        }
+
+        .nav-link {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+        }
+
+        /* THIS IS SNIPPET BUTTONS CSS */
+
+        .btn-23,
+        .btn-23 *,
+        .btn-23 :after,
+        .btn-23 :before,
+        .btn-23:after,
+        .btn-23:before {
+            border: 0 solid;
+            box-sizing: border-box;
+            width: 250px;
+        }
+
+        .btn-23 {
+            -webkit-tap-highlight-color:
+                transparent;
+            -webkit-appearance: button;
+            background-color:
+                #000;
+            background-image: none;
+            color:
+                #fff;
+            cursor: pointer;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+                Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            font-size: 100%;
+            font-weight: 900;
+            line-height: 1.5;
+            margin: 0;
+            -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+            padding: 0;
+            text-transform: uppercase;
+        }
+
+        .btn-23:disabled {
+            cursor: default;
+        }
+
+        .btn-23:-moz-focusring {
+            outline: auto;
+        }
+
+        .btn-23 svg {
+            display: block;
+            vertical-align: middle;
+        }
+
+        .btn-23 [hidden] {
+            display: none;
+        }
+
+        .btn-23 {
+            border-radius: 99rem;
+            border-width: 2px;
+            overflow: hidden;
+            padding: 0.8rem 3rem;
+            position: relative;
+        }
+
+        .btn-23 span {
+            display: grid;
+            inset: 0;
+            place-items: center;
+            position: absolute;
+            transition: opacity 0.2s ease;
+        }
+
+        .btn-23 .marquee {
+            --spacing: 5em;
+            --start: 0em;
+            --end: 5em;
+            -webkit-animation: marquee 1s linear infinite;
+            animation: marquee 1s linear infinite;
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+            opacity: 0;
+            position: relative;
+            text-shadow:
+                #fff var(--spacing) 0,
+                #fff calc(var(--spacing) * -1) 0,
+
+                #fff calc(var(--spacing) * -2) 0;
+        }
+
+        .btn-23:hover .marquee {
+            -webkit-animation-play-state: running;
+            animation-play-state: running;
+            opacity: 1;
+        }
+
+        .btn-23:hover .text {
+            opacity: 0;
+        }
+
+        @-webkit-keyframes marquee {
+            0% {
+                transform: translateX(var(--start));
+            }
+
+            to {
+                transform: translateX(var(--end));
+            }
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(var(--start));
+            }
+
+            to {
+                transform: translateX(var(--end));
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">MEET'S FASHION</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" routerLink="/institute">Home</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/institute/courses">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/contect-us">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Unleash Your Inner Fashion Designer</h1>
+            <p class="lead">Learn from the best at MEET'S FASHION Institute. Our comprehensive courses will empower you
+                to create your own fashion empire.</p>
+            <!-- <a routerLink="/institute/courses" class="btn btn-primary btn-lg">Explore Our Courses</a> -->
+            <a routerLink="/institute/courses"><button class="btn-23">
+                    <span class="text">Explore Our Courses</span>
+                    <span class="marquee" aria-hidden>Courese</span>
+                </button></a>
+        </div>
+    </header>
+
+    <section class="container mt-5">
+        <h2 class="text-center mb-5">Why Choose MEET'S FASHION Institute?</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fas fa-graduation-cap fa-3x text-primary"></i>
+                        <h5 class="card-title">Experienced Instructors</h5>
+                        <p class="card-text">Learn from industry professionals with years of experience in fashion
+                            design.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fas fa-palette fa-3x text-primary"></i>
+                        <h5 class="card-title">Creative Curriculum</h5>
+                        <p class="card-text">Our curriculum is designed to ignite your creativity and equip you with the
+                            skills needed to succeed.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fas fa-trophy fa-3x text-primary"></i>
+                        <h5 class="card-title">Industry Connections</h5>
+                        <p class="card-text">We provide opportunities to network with industry professionals and gain
+                            valuable insights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-5 bg-light py-5">
+        <h2 class="text-center mb-5">Our Students Are Making Waves</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://placehold.co/300x200" class="card-img-top" alt="Student 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Student Name 1</h5>
+                        <p class="card-text">Testimonial from Student 1.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://placehold.co/300x200" class="card-img-top" alt="Student 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Student Name 2</h5>
+                        <p class="card-text">Testimonial from Student 2.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://placehold.co/300x200" class="card-img-top" alt="Student 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Student Name 3</h5>
+                        <p class="card-text">Testimonial from Student 3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h1 class="brand-name">&copy; MEET'S FASHION</h1>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <p>Some information text goes here.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-buttons">
+                        <div class="btn-group">
+                            <a href="https://www.instagram.com/your-brand" target="_blank"
+                                class="btn footer-btn">&nbsp;<i class="fab fa-instagram"></i> &nbsp;Instagram</a>
+                            <a href="https://www.facebook.com/your-brand" target="_blank"
+                                class="btn footer-btn">&nbsp;<i class="fab fa-facebook"></i>&nbsp;Facebook</a>
+                        </div>
+                        <div class="btn-group">
+                            <a href="https://wa.me/your-number" target="_blank" class="btn footer-btn">&nbsp;<i
+                                    class="fab fa-whatsapp"></i>&nbsp;WhatsApp</a>
+                            <a href="tel:your-number" class="btn footer-btn">&nbsp;<i
+                                    class="fas fa-phone"></i>&nbsp;Call Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

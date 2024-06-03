@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Fashion Brand</title>
+
+    <!-- THIS IS BOOTSTREP -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- THIS IS FOR FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- THIS IS FOR FOUNT AWOSOME -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            /* font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa; */
+
+            /* background: linear-gradient(135deg, #a18cd1, #fbc2eb); */
+            padding-top: 56px;
+
+            background: linear-gradient(to bottom, #d19ea3, #c194ac, #b38ab2, #a17fb5);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            /* Ensure full height gradient */
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero {
+            height: 100vh;
+            /* background-image: url("DSC08875.jpg"); */
+            /* Replace with your hero image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-us {
+            padding: 50px 0;
+        }
+
+        .about-us p {
+            font-size: 1.5rem;
+            line-height: 1.5;
+            font-family: 'Dancing Script', sans-serif;
+        }
+
+        .heading {
+            animation: fadeInDown 3s infinite;
+            font-size: 4rem;
+            padding: 20px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+
+        .letter {
+            display: inline-block;
+            opacity: 0;
+            animation: letterAnimation 5s ease-in-out infinite;
+            animation-delay: calc(0.1s * var(--letter-index));
+        }
+
+        /* THIS IS FOR CAROUSEL */
+
+        #heroCarousel {
+            width: 100%;
+            /* Example width */
+            height: 750px;
+            /* Example height */
+            overflow: hidden;
+            /* Hide overflow to ensure images stay within container */
+            position: relative;
+            /* Ensure absolute positioning of images works relative to this container */
+        }
+
+        #heroCarousel .carousel-item img {
+            width: auto;
+            /* Let the width adjust automatically */
+            height: auto;
+            /* Let the height adjust automatically */
+            max-width: 100%;
+            /* Ensure image doesn't exceed container width */
+            max-height: 100%;
+            /* Ensure image doesn't exceed container height */
+            top: 0;
+            /* Align images to the top */
+            left: 0;
+            /* Align images to the left */
+        }
+
+        @keyframes letterAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            width: auto;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .brand-name {
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        .footer-btn {
+            color: #fff;
+            background-color: transparent;
+            padding: 0.3rem 0.6rem;
+        }
+
+        .footer-btn:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .footer-buttons {
+            display: grid;
+            gap: 10px;
+        }
+
+        .btn-group {
+            display: flex;
+        }
+
+        /* THIS IS FOR NEVBAAR */
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-left: 1rem;
+        }
+
+        .nav-link {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+        }
+
+        /* THIS IS CSS FOR SNIPPET BUTTONS */
+
+        .glow-on-hover {
+            margin-right: 15px;
+            width: 220px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color:
+                #fff;
+            background:
+                #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+        }
+
+        .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .glow-on-hover:active {
+            color:
+                #000
+        }
+
+        .glow-on-hover:active:after {
+            background:
+                transparent;
+        }
+
+        .glow-on-hover:hover:before {
+            opacity: 1;
+        }
+
+        .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background:
+                #111;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">MEET'S FASHION</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/boutique">Boutique</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/institute">Institute</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <h1 class="text-center heading">
+            <span class="letter" style="--letter-index: 1;">M</span>
+            <span class="letter" style="--letter-index: 2;">E</span>
+            <span class="letter" style="--letter-index: 3;">E</span>
+            <span class="letter" style="--letter-index: 4;">T</span>
+            <span class="letter" style="--letter-index: 5;">'</span>
+            <span class="letter" style="--letter-index: 6;">S</span>
+            &nbsp;
+            <span class="letter" style="--letter-index: 7;">F</span>
+            <span class="letter" style="--letter-index: 8;">A</span>
+            <span class="letter" style="--letter-index: 9;">S</span>
+            <span class="letter" style="--letter-index: 10;">H</span>
+            <span class="letter" style="--letter-index: 11;">I</span>
+            <span class="letter" style="--letter-index: 12;">O</span>
+            <span class="letter" style="--letter-index: 13;">N</span>
+        </h1>
+        <section class="carousel slide" data-bs-ride="carousel" id="heroCarousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets\image\1238796.png" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets\image\20230913_212441.jpg" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets\image\DSC08875.jpg" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets\image\IMG20230329162722.jpg" class="d-block w-100" alt="Slide 1">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-ride="carousel">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+
+        <section class="container about-us">
+            <h2>About Us</h2>
+            <!-- <p>At MEET'S FASHION, we believe that fashion is an art form that allows individuals to express their unique
+                personalities. Our team of talented designers is dedicated to creating exquisite pieces that blend
+                timeless elegance with modern trends. With a keen eye for detail and a commitment to using only the
+                finest materials, we craft garments that not only look stunning but also feel comfortable and empowering
+                to wear.</p> -->
+            <p>
+                Welcome to Meet's Fashion, where fashion meets artistry. Established in 2006, our boutique is a haven
+                for those who appreciate the finer details of high-end fashion and bespoke tailoring. Located in Rajkot,
+                we are dedicated to crafting unique, stylish, and elegant pieces that reflect your individuality.
+            </p>
+            <p>
+                At Meet's Fashion, we believe that fashion is not just about clothes—it's about creating a story. From
+                luxurious fabrics to intricate embellishments, each detail is meticulously curated to provide an
+                unparalleled fashion experience.
+            </p>
+            <p>
+                We specialize in custom designs, offering a personalized approach to fashion that caters to your unique
+                preferences and style.
+            </p>
+            <p>
+                Step into Meet's Fashion and discover a world where fashion dreams come true. We look forward to helping
+                you express your individuality through timeless and sophisticated fashion.
+            </p>
+            <p>
+                Thank you for choosing Meet's Fashion. Let's create something extraordinary together.
+            </p>
+        </section>
+        <!-- <section class="container text-center my-5">
+            <h3>Explore Our Collections</h3>
+            <a href="#" class="btn btn-primary">Shop Now</a>
+        </section> -->
+        <!-- <section class="container text-center my-5">
+            <h3>Connect with Us</h3>
+            <div class="d-flex justify-content-center">
+                <a href="https://www.instagram.com/your-brand" target="_blank" class="btn btn-outline-dark me-2"><i
+                        class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://wa.me/your-number" target="_blank" class="btn btn-outline-dark me-2"><i
+                        class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://www.facebook.com/your-brand" target="_blank" class="btn btn-outline-dark me-2"><i
+                        class="fab fa-facebook"></i> Facebook</a>
+                <a href="tel:your-number" class="btn btn-outline-dark"><i class="fas fa-phone"></i> Call Us</a>
+            </div>
+        </section> -->
+        <section class="container text-center my-5">
+            <h3>Visit Our</h3>
+            <div class="d-flex justify-content-center mb-3">
+                <!-- <a routerLink="/boutique" class="btn btn-custom me-3">Boutique</a>
+                <a routerLink="/institute" class="btn btn-custom">Institute</a> -->
+                <a routerLink="/boutique"><button class="glow-on-hover">BOUTIQUE</button></a>
+                <a routerLink="/institute"><button class="glow-on-hover">INSTITUTE</button></a>
+            </div>
+        </section>
+        <footer class="text-center py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <h1 class="brand-name">&copy; MEET'S FASHION</h1>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <p>Some information text goes here.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-buttons">
+                            <div class="btn-group">
+                                <a href="https://www.instagram.com/your-brand" target="_blank"
+                                    class="btn footer-btn">&nbsp;<i class="fab fa-instagram"></i> &nbsp;Instagram</a>
+                                <a href="https://www.facebook.com/your-brand" target="_blank"
+                                    class="btn footer-btn">&nbsp;<i class="fab fa-facebook"></i>&nbsp;Facebook</a>
+                            </div>
+                            <div class="btn-group">
+                                <a href="https://wa.me/your-number" target="_blank" class="btn footer-btn">&nbsp;<i
+                                        class="fab fa-whatsapp"></i>&nbsp;WhatsApp</a>
+                                <a href="tel:your-number" class="btn footer-btn">&nbsp;<i
+                                        class="fas fa-phone"></i>&nbsp;Call Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Qg+IUvUIniDJx3SMcLCpqTtAvqw6mTO6N9SyAyzTswxlqCxyNzEYCjCFN/1zoHU6"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel({
+                interval: 2000 // Set your desired interval in milliseconds (e.g., 3 seconds)
+            });
+        });
+    </script>
+
+</body>
+
+</html>
